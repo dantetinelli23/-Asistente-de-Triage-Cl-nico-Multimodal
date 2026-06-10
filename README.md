@@ -359,16 +359,11 @@ Schedule (diario)
 
 ## ⚠️ Limitaciones conocidas
 
-Documentadas con honestidad — reconocer los límites es parte de entender el sistema:
-
-- El loop de polling de la ingesta no tiene tope máximo de reintentos (riesgo de loop infinito si LlamaParse falla).
-- El agente de la rama de texto presentó un error recurrente (`Bad request`) en algunas ejecuciones, visible en LangSmith — pendiente de diagnóstico.
-- El evaluador de imágenes juzga sobre la descripción del agente, no sobre la foto original. Un evaluador multimodal sería más robusto.
 - Los umbrales del workflow auto-mejorable (3.5 / 30%) son estimaciones iniciales; deben recalibrarse con datos de producción reales.
 
 ---
 
-## 🧰 Tech highlights (para quien revisa el repo)
+## 🧰 Tech highlights 
 
 Este proyecto demuestra, más allá de "conectar nodos":
 
