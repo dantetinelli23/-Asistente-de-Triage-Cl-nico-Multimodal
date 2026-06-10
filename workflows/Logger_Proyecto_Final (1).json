@@ -1,0 +1,286 @@
+{
+  "name": "Logger Proyecto Final",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "id_consulta",
+              "type": "number"
+            },
+            {
+              "name": "nivel"
+            },
+            {
+              "name": "evento"
+            },
+            {
+              "name": "rama"
+            },
+            {
+              "name": "origen"
+            },
+            {
+              "name": "mensaje"
+            },
+            {
+              "name": "detalle"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "25ab20ca-a2f7-4bf9-b026-f94db6dd3556",
+      "name": "Traemos LOGS de SISTEMA"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app6lVidVVOqoluYX",
+          "mode": "list",
+          "cachedResultName": "Triage Clinico",
+          "cachedResultUrl": "https://airtable.com/app6lVidVVOqoluYX"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblSlwj3PWr6Grjk7",
+          "mode": "list",
+          "cachedResultName": "LOGS_SISTEMA",
+          "cachedResultUrl": "https://airtable.com/app6lVidVVOqoluYX/tblSlwj3PWr6Grjk7"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_consulta": "={{ $json.id_consulta }}",
+            "nivel": "={{ $json.nivel }}",
+            "evento": "={{ $json.evento }}",
+            "rama": "={{ $json.rama }}",
+            "origen": "={{ $json.origen }}",
+            "mensaje": "={{ $json.mensaje }}",
+            "detalle": "={{ $json.detalle }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "id_consulta",
+              "displayName": "id_consulta",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nivel",
+              "displayName": "nivel",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "INFO",
+                  "value": "INFO"
+                },
+                {
+                  "name": "WARNING",
+                  "value": "WARNING"
+                },
+                {
+                  "name": "ERROR",
+                  "value": "ERROR"
+                },
+                {
+                  "name": "CRITICO",
+                  "value": "CRITICO"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "evento",
+              "displayName": "evento",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "consulta_recibida",
+                  "value": "consulta_recibida"
+                },
+                {
+                  "name": "audio_calidad_baja",
+                  "value": "audio_calidad_baja"
+                },
+                {
+                  "name": "triage_generado",
+                  "value": "triage_generado"
+                },
+                {
+                  "name": "fallo_agente",
+                  "value": "fallo_agente"
+                },
+                {
+                  "name": "evaluacion_completada",
+                  "value": "evaluacion_completada"
+                },
+                {
+                  "name": "discrepancia_detectada",
+                  "value": "discrepancia_detectada"
+                },
+                {
+                  "name": "escalado_hitl",
+                  "value": "escalado_hitl"
+                },
+                {
+                  "name": "decision_medica",
+                  "value": "decision_medica"
+                },
+                {
+                  "name": "escalado_2do_medico",
+                  "value": "escalado_2do_medico"
+                },
+                {
+                  "name": "sin_revision_critica",
+                  "value": "sin_revision_critica"
+                },
+                {
+                  "name": "fallo_envio",
+                  "value": "fallo_envio"
+                },
+                {
+                  "name": "respuesta_enviada",
+                  "value": "respuesta_enviada"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "rama",
+              "displayName": "rama",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "audio",
+                  "value": "audio"
+                },
+                {
+                  "name": "imagen",
+                  "value": "imagen"
+                },
+                {
+                  "name": "texto",
+                  "value": "texto"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "origen",
+              "displayName": "origen",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "mensaje",
+              "displayName": "mensaje",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "detalle",
+              "displayName": "detalle",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "86e57f7f-3cba-46e5-bbb3-74326f0e2e3c",
+      "name": "Adjuntamos a Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "",
+          "name": "Proyecto FInal"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Traemos LOGS de SISTEMA": {
+      "main": [
+        [
+          {
+            "node": "Adjuntamos a Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "meta": {},
+  "nodeGroups": [],
+  "tags": [],
+  "pinData": {}
+}
