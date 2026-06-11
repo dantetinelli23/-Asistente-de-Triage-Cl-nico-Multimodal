@@ -103,6 +103,25 @@ FLOW C — SELF-IMPROVEMENT   (scheduled, daily)
 ├── Logger_Proyecto_Final.json   # Reusable Logger sub-workflow (DRY logging to Airtable)
 └── README.md                    # You are here
 ```
+---
+
+## 📸 Screenshots
+
+**The full n8n workflow** — ingestion, multimodal consultation, and self-improvement in one canvas.
+![n8n workflow canvas](docs/img/Workflow.png)
+
+**RAG ingestion pipeline** — LlamaParse → chunking → Cohere embeddings → Pinecone.
+![RAG ingestion flow](docs/img/Ingesta%20RAG.png)
+
+**Pinecone vector index** — the embedded clinical protocols, searchable by meaning.
+![Pinecone vector database](docs/img/Pinecone.png)
+
+**LangSmith tracing** — latency, tokens, and cost per LLM call.
+![LangSmith traces](docs/img/Langsmith.png)
+![LangSmith traces detail](docs/img/Langsmith2.png)
+
+**Airtable metrics** — the CONSULTAS and LOGS_SISTEMA tables in action.
+![Airtable metrics tables](docs/img/Airtable.png)
 
 > 💡 **Suggested additions** (see TODO comments in this file): a `/docs` folder with the full design document (PDF) and a `/docs/img` folder with screenshots of the bot, the n8n canvas, and the Airtable metrics tables.
 
