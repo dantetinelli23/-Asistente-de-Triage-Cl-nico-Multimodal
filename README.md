@@ -2,8 +2,6 @@
 
 > Pipeline de automatización con IA construido en **n8n self-hosted**: recibe consultas de pacientes por texto, audio o imagen, las responde con un triage clínico fundamentado en protocolos reales (RAG), incorpora revisión médica humana en los casos críticos, se evalúa a sí mismo y vigila su propia calidad en producción.
 
-Este no es un "chatbot que responde". Es un sistema diseñado para ser **confiable, auditable, seguro y medible** — los cuatro atributos que separan una automatización de juguete de una que una institución podría adoptar.
-
 ---
 
 ## 📋 Tabla de contenidos
