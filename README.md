@@ -3,14 +3,13 @@
 
 > An AI automation pipeline built on **self-hosted n8n** that triages patient symptoms from **text, voice, or image** — grounded in real clinical protocols (RAG), gated by **human medical review**, and shipped with **self-evaluation** and **production-grade observability**.
 
-![n8n](https://img.shields.io/badge/n8n-self--hosted-EA4B71)
-![RAG](https://img.shields.io/badge/architecture-RAG-blue)
-![Pinecone](https://img.shields.io/badge/vector%20db-Pinecone-000000)
-![Cohere](https://img.shields.io/badge/embeddings-Cohere-39594D)
-![Groq](https://img.shields.io/badge/LLM-Groq%20Llama%203.3-F55036)
-![Anthropic](https://img.shields.io/badge/judge-Claude%20Sonnet-D97757)
-![LangSmith](https://img.shields.io/badge/tracing-LangSmith-1C3C3C)
-![Airtable](https://img.shields.io/badge/metrics-Airtable-18BFFF)
+<img width="1280" height="684" alt="image" src="https://github.com/user-attachments/assets/3c75d9ea-3afd-477e-82e5-0a3121556c6c" />
+<img width="1251" height="599" alt="image" src="https://github.com/user-attachments/assets/aca89031-94e0-4db3-9bc6-eceba8060e93" />
+<img width="1276" height="599" alt="image" src="https://github.com/user-attachments/assets/0122f5a9-7c60-47ec-9b06-94560b360d41" />
+<img width="1279" height="605" alt="image" src="https://github.com/user-attachments/assets/7f0c477a-6177-4ed2-ad81-4f7edb18ec75" />
+<img width="1279" height="599" alt="image" src="https://github.com/user-attachments/assets/e3ebe575-8fe4-4fdf-a0eb-d511473f13a8" />
+
+
 
 This is **not a chatbot that answers questions**. It is a system designed to be **reliable, auditable, safe, and measurable** — the four properties that separate a toy automation from one a real institution could adopt.
 
