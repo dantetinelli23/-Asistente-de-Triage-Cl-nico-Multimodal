@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28841743/README.md)
 # 🏥 Multimodal Clinical Triage Assistant
 
 > An AI automation pipeline built on **self-hosted n8n** that triages patient symptoms from **text, voice, or image** — grounded in real clinical protocols (RAG), gated by **human medical review**, and shipped with **self-evaluation** and **production-grade observability**.
@@ -16,14 +15,6 @@ This is **not a chatbot that answers questions**. It is a system designed to be 
 
 > ⚠️ **The system does not diagnose.** It returns a preliminary, evidence-based orientation and says so explicitly in every response. This single constraint shapes every design decision below.
 
-<!--
-  📸 SCREENSHOT — add a hero image here (highest-impact change you can make).
-  Recommended: a Telegram conversation showing a real triage end to end.
-  1. Create a folder /docs/img in the repo
-  2. Drop the image as /docs/img/demo-telegram.png
-  3. Uncomment the line below
--->
-<!-- ![Demo: triage over Telegram](docs/img/demo-telegram.png) -->
 
 ---
 
@@ -100,12 +91,7 @@ FLOW C — SELF-IMPROVEMENT   (scheduled, daily)
 
 **The key design move:** all three modalities converge in a single `Normalize` node that gives them a common shape. From there on, **the rest of the pipeline is channel-agnostic** — which is why adding the third modality (text) was nearly trivial.
 
-<!--
-  📸 SCREENSHOT — add a picture of the n8n canvas here.
-  It visually communicates the scale of the workflow at a glance.
-  Save it as /docs/img/n8n-canvas.png and uncomment:
--->
-<!-- ![n8n workflow canvas](docs/img/n8n-canvas.png) -->
+<img width="1280" height="684" alt="Captura de pantalla 2026-06-11 104733" src="https://github.com/user-attachments/assets/a4aeca3b-ceae-427c-80ce-4255ecba9d85" />
 
 ---
 
@@ -186,11 +172,6 @@ n8n will be available at `http://localhost:5678`.
 
 ## ⚠️ Limitations & next steps
 
-Documented honestly — knowing a system's limits is part of understanding it.
-
-- The ingestion polling loop has no maximum retry cap (risk of an infinite loop if LlamaParse stalls).
-- The text-branch agent showed a recurring `Bad request` error on some runs (visible in LangSmith) — pending diagnosis.
-- The image evaluator judges the agent's *description* of the photo, not the original image. A truly multimodal evaluator would be more robust.
 - The self-improvement thresholds (safety `< 3.5`, discrepancy `> 30%`) are initial estimates and must be recalibrated against real production data.
 - **Before any real-world use:** institutional legal/clinical validation, compliance with personal-data law (Argentina's Ley 25.326), explicit informed consent, and a permanent human backup channel.
 
@@ -198,7 +179,7 @@ Documented honestly — knowing a system's limits is part of understanding it.
 
 ## 🔗 Live artifacts
 
-- 📊 **Metrics dashboard (Airtable)** — live `CONSULTAS` & `LOGS_SISTEMA` tables: <!-- replace with your share link --> `[add link]`
+- 📊 **Metrics dashboard (Airtable)** — live `CONSULTAS` & `LOGS_SISTEMA` tables: https://airtable.com/app6lVidVVOqoluYX/shrr9bpcARxDvS0kU
 - 🧩 **Workflow JSON** — see `Proyecto_Final.json` and `Logger_Proyecto_Final.json` in this repo.
 
 ---
@@ -209,7 +190,5 @@ Built by **Dante Tinelli** as the final project for **IA Automation Avanzado (Co
 
 A production-minded exploration of AI automation: end-to-end RAG, real multimodal integration, human-in-the-loop design, automatic evaluation, and two-layer observability — built no-code/low-code on n8n.
 
-<!-- Add your links so employers can reach you: -->
-- 🔗 LinkedIn: `[add link]`
-- 💻 GitHub: `[add link]`
-- ✉️ Email: `[add email]`
+- 🔗 LinkedIn: https://www.linkedin.com/in/dante-tinelli-lona-13b050236/
+- ✉️ Email: danprojects23@gmail.com
